@@ -1,0 +1,2 @@
+accessibility_compliance.patches.v1_0.setup_custom_fields
+accessibility_compliance.patches.v1_0.setup_default_settings

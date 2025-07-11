@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Compliance Dashboard</title>
+    <link rel="stylesheet" href="/assets/accessibility_compliance/css/dashboard.css">
+</head>
+<body>
+    <div class="accessibility-dashboard">
+        <header class="dashboard-header">
+            <h1>Accessibility Compliance Dashboard</h1>
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="startNewScan()">Start New Scan</button>
+                <button class="btn btn-secondary" onclick="exportReport()">Export Report</button>
+            </div>
+        </header>
+        
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h3>Total Scans</h3>
+                <div class="stat-number" id="total-scans">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>Issues Found</h3>
+                <div class="stat-number error" id="total-issues">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>Compliance Score</h3>
+                <div class="stat-number success" id="compliance-score">-</div>
+            </div>
+            <div class="stat-card">
+                <h3>Last Scan</h3>
+                <div class="stat-number" id="last-scan">-</div>
+            </div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="scan-results">
+                <h2>Recent Scans</h2>
+                <div id="scan-results-list">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="compliance-chart">
+                <h2>Compliance Trends</h2>
+                <canvas id="compliance-chart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/assets/accessibility_compliance/js/dashboard.js"></script>
+</body>
+</html>
